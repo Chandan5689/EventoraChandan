@@ -9,7 +9,7 @@ function Header() {
         <div><input className='text-center border-black border-2 rounded-md w-80' type="text" name="" id="" placeholder='Search your events...'  /></div>
         <div>
             <ul className='flex w-96 justify-around'>
-                <li> <NavLink to='/aboutus' className={({isActive})=>`${isActive}? text-orange-600 : text-black`} > About Us </NavLink></li>
+                <li> <NavLink to='/aboutus' className={({isActive})=>`${isActive? "text-red-600" : "text-black"} hover:text-red-600`} > About Us </NavLink></li>
                 <li>Add Event</li>
             </ul>
         </div>
