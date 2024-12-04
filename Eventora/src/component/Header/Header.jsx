@@ -1,14 +1,15 @@
 import React from 'react'
 import profileImage from '../../assets/profile.png'
+import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   return (
     <div className='flex h-32 w-screen justify-between pt-4 align-middle '>
-        <h1 className='pl-4 text-2xl'>Eventora</h1>
+        <Link to='/'><h1 className='pl-4 text-2xl'>Eventora</h1></Link>
         <div><input className='text-center border-black border-2 rounded-md w-80' type="text" name="" id="" placeholder='Search your events...'  /></div>
         <div>
             <ul className='flex w-96 justify-around'>
-                <li>About Us</li>
+                <li> <NavLink to='/aboutus' className={({isActive})=>`${isActive}? text-orange-600 : text-black`} > About Us </NavLink></li>
                 <li>Add Event</li>
             </ul>
         </div>
