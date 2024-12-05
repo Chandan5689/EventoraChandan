@@ -13,7 +13,7 @@ function Header() {
                 <li><NavLink to='/addevent' className={({isActive})=> `${isActive? "text-red-600" : "text-black"} hover:text-red-600`}>Add Event</NavLink></li>
             </ul>
         </div>
-        <div className='mr-5'><img className='h-10' src={profileImage} alt="" /></div>
+        <div className='mr-5'><Link to='/profile'><img className='h-10' src={profileImage} alt="" /></Link></div>
     </div>
   )
 }
