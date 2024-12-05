@@ -10,7 +10,7 @@ function Header() {
         <div>
             <ul className='flex w-96 justify-around'>
                 <li> <NavLink to='/aboutus' className={({isActive})=>`${isActive? "text-red-600" : "text-black"} hover:text-red-600`} > About Us </NavLink></li>
-                <li>Add Event</li>
+                <li><NavLink to='/addevent' className={({isActive})=> `${isActive? "text-red-600" : "text-black"} hover:text-red-600`}>Add Event</NavLink></li>
             </ul>
         </div>
         <div className='mr-5'><img className='h-10' src={profileImage} alt="" /></div>
