@@ -6,14 +6,19 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, R
 import App from './App.jsx'
 import About from './component/Header/HeaderElements/About.jsx'
 import AddEvents from './component/Header/HeaderElements/AddEvents.jsx'
+import Profile from './component/Profile/Profile.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>} >
+    <Route  >
+      <Route path='/' element={<Layout/>}>
       <Route path='' element={<App/>} />
       <Route path='aboutus' element={<About/>} />
       <Route path='addevent' element={<AddEvents/>} />
+      </Route>
+      <Route path='profile' element={<Profile/>}/>
     </Route>
+    
   )
 )
 
