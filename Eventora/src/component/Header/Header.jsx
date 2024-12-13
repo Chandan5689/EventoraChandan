@@ -2,8 +2,16 @@ import React from 'react'
 import profileImage from '../../assets/profile2.png'
 import searchIcon from '../../assets/search_icon.png'
 import { Link, NavLink } from 'react-router-dom'
+import Dropdown from '../Dropdown/Dropdown'
+import { useState } from 'react'
 
 function Header() {
+  
+  const [showmenu, setsShowmenu] = useState(false);
+  const openMenu = ()=>{
+    setsShowmenu(!showmenu)
+  }
+  
   return (
     <div className='header flex h-28 w-[100%] justify-between px-6 items-center sticky top-0 tablet:gap-3'>
       <Link to='/'><h1 className='text-lg'>Eventora</h1></Link>
@@ -24,7 +32,6 @@ function Header() {
         
         <div className='profile pb-2'><Link to='/profile'><img className='h-[45px] w-[45px]' src={profileImage} alt="" /></Link></div>
       </section>
-      
     </div>
   )
 }
